@@ -45,7 +45,7 @@ public class EventosController {
 		}
 	}
 	
-	// Inclus„o de Eventos - usaremos o retorno do tipo String nestes actions
+	// Inclus√£o de Eventos - usaremos o retorno do tipo String nestes actions
 	@GetMapping("/eventos/incluir")
 	public String incluir(Model model) {
 		try {
@@ -57,7 +57,7 @@ public class EventosController {
 		}
 	}
 	
-	// BindingResult deve ser colocado logo apÛs @ModelAttribute
+	// BindingResult deve ser colocado logo ap√≥s @ModelAttribute
 	@PostMapping("/cadevento")
 	public String incluir(
 			@Valid @ModelAttribute("evento") Evento evento,
@@ -78,7 +78,7 @@ public class EventosController {
 		}		
 	}
 	
-	// AlteraÁ„o de eventos
+	// Altera√ß√£o de eventos
 	
 	@GetMapping("/eventos/alterar/{idEvento}")
 	public String alterar(@PathVariable("idEvento") int id, Model model) {
@@ -124,23 +124,7 @@ public class EventosController {
 			return "erro";
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-//	@GetMapping("/endereco")
-//	public ModelAndView buscar(Model model) {
-//		String uri = "https://viacep.com.br/ws/01001000/json/";
-//		RestTemplate template = new RestTemplate();
-//		ResponseEntity<Endereco> endereco = template.getForEntity(uri, Endereco.class);
-//		
-//		model.addAttribute("endereco", endereco.getBody());
-//		return new ModelAndView("endereco");
-//	}
+
 }
 
 
